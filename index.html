@@ -1,0 +1,174 @@
+
+<!-- FD:homeproxy-home:homeproxy/home/startup.vm:START --><!-- FD:homeproxy-home:homeproxy/home/startup.vm:startup.schema:START --><!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="baidu-site-verification" content="OyUb4RVdSe" />
+    <meta name="renderer" content="webkit" />
+    <meta name="pagename" content="startup" />
+    <meta name="qiqi" content="博客/个人交流/学习/网络学习/测试/学/习/值得收藏">
+    <meta name="description" content="个人学习网站，可能会一直维护下去/博客/个人交流/好好学习，天天向上    /学习永无止境/加油/加油/加油">
+    <title>遇见中余</title>
+    <link rel="stylesheet" href="img.css">
+    <link rel="stylesheet" href="inline.css">
+    <link rel="stylesheet" type="text/css" href="haha.css">
+    <link rel="icon" href="log.ico" type="image/x-icon">
+    <link rel="icon" href="log.ico" />
+
+
+</head>
+<body>
+    <div id="btn">
+        <audio id="audio-player" ref="audio" preload="preload" autoplay="autoplay" loop="loop">
+            <source src="img/woxiangyao.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    
+    
+    
+    <div class="main">
+        <div class="header">
+            <div class="nav">
+                <div class="logo">
+                     <a class="logo" href="http://www.yuqiqi.top/" ></a>
+                </div>
+                <img class="ipv6" src="img/ipv6.png">
+                <div class="entry">
+                    
+                    <span class="state">我不了解你--></span>
+                    
+                        <a href="http://www.gusuci.top/" target="_self" seed="">点开看看呗</a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <div class="wrap">
+                    <div class="slogan"></div>
+                    <div class="mid">
+                        <div class="main-entry">
+                            <a href="hxxx/yuqiqi/Download.html" class="developer-login" target="_blank"><span class="title"><i
+                                    class="isv-developer"></i>学习源码！</span><s></s></a>
+                            <a href="#" class="personal-developer-login"><span class="title"><i
+                                class="developer"></i>我的个人经历</span><s></s></a>
+                            <a href="javascript:;" class="seller-login">
+                                <span class="title"><i class="seller"></i>我的靓照</span>
+                                <span class="seller-entry alipay">照片^_^</span>
+                                <span class="inerval-line"></span>
+                                <span class="seller-entry koubei">生活</span><s></s>
+                            </a>
+                            <a href="hxxx/登录/登录.html" class="personal-login"><span class="title"><i
+                                    class="personal"></i>网站含义！！！</span><s></s></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slideshow">
+                <div class="slideshow-image" style="background-image: url('img/lp.jpg')"></div>
+                <div class="slideshow-image" style="background-image: url('img/lp2.jpg')"></div>
+                <div class="slideshow-image" style="background-image: url('img/lp3.jpg')"></div>
+                <div class="slideshow-image" style="background-image: url('img/1231.png')"></div>
+            </div>
+
+
+
+
+<div class="footer">
+    <div class="ownership">
+        <span><a href="yuqiqi.top.png">域名证书</a><a style="margin-left:10px;" href="http://www.beian.gov.cn/">网站备案&nbsp;赣ICP备2021009644号-1</a><a><img src="img/备案图标.png" alt=""></a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36078102000051" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/>赣公网安备 36078102000051号</a></span>
+       
+    </div>
+
+</body>
+</html>
+<script>
+    let isWeixin = () => {
+        let ua = window.navigator.userAgent.toLowerCase()
+        return;
+        /micromessenger/
+            .test(ua)
+    }
+    // method 自动播放
+    let audioPlayer = (id) => {
+        let audio = document.getElementById(id)
+        if (isWeixin()) {
+            document.addEventListener(
+                'WeixinJSBridgeReady'
+                , () => {
+                    audio.play()
+                }, false);
+
+            // 添加 getNetworkType 的判断原因, 请看问题分析2
+            if (typeof window.
+                WeixinJSBridge
+                ==
+                "object"
+                && typeof window.
+                    WeixinJSBridge
+                    .invoke ==
+                "function"
+            ) {
+                window.
+                    WeixinJSBridge
+                    .invoke(
+                        'getNetworkType'
+                        , {}, () => {
+                            audio.play()
+                        })
+            }
+        } else {
+            // audio.play();
+            let touchPlay = () => {
+                audio.play();
+                document.removeEventListener(
+                    'touchstart'
+                    , touchPlay, false)
+            };
+            if (audio.paused) {
+                document.addEventListener(
+                    'touchstart'
+                    , touchPlay, false)
+            }
+        }
+    }
+    // 使用
+    audioPlayer(
+        'audio-player'
+    );
+
+    var audio = document.getElementById("audio-player");
+    var btn = document.getElementById("btn");
+    var rotateVal = 0;
+
+    var InterVal;     // 定时器
+    // 设置定时器
+    function rotate() {
+        InterVal = setInterval(function () {
+            rotateVal += 4;
+            // 设置旋转属性(顺时针)
+            btn.style.transform = 'rotate(' + rotateVal + 'deg)';
+            // 设置旋转属性(逆时针)
+            //img.style.transform = 'rotate(-' + rotateVal + 'deg)'
+            // 设置旋转时的动画  匀速0.1s
+            btn.style.transition = '0.1s linear'
+        }, 100)
+    }
+    // rotate();
+    btn.onclick = function () {         //点击按钮播放停止
+        if (audio.paused) { //判断当前的状态是否为暂停，若是则点击播放，否则暂停
+            audio.play();
+            rotate()
+        } else {
+            audio.pause();
+            clearInterval(InterVal)
+        }
+    };
+
+</script>
+

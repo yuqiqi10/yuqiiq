@@ -1,0 +1,296 @@
+body {
+    font: 12px/1.5 "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \5b8b\4f53;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    z-index: 999;
+    height: 70px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    background-image: url(img/logo.png);
+    /* logo图片 */
+    display: block;
+    width: 70px;
+    height: 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 70px;
+}
+
+.ipv6 {
+    float: left;
+    height: 23px;
+    margin-left: 20px;
+}
+
+.entry {
+    float: right;
+    color: #fff;
+}
+
+.entry .state {
+    color: #bfbfbf;
+}
+
+.entry a {
+    font-size: 12px;
+    color: #fff;
+    margin: 0 5px;
+}
+
+.entry a:hover {
+    color: #00bbee;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.content {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;;
+}
+
+.wrap {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.slogan {
+    width: 600px;
+    height: 200px;
+    background: url(img/zx.png) no-repeat 0 0;
+    /* 你是中心 */
+    display: inline-block;
+    background-size: 600px;
+}
+
+.mid {
+    width: 100%;
+}
+
+.main-entry {
+    width: 740px;
+    height: 50px;
+    margin: 15px auto 0;
+}
+
+.main-entry a {
+    display: block;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    height: 50px;
+    width: 170px;
+    color: #ffffff;
+    line-height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-entry a .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding-left: 18px;
+}
+
+.main-entry a .title i {
+    position: absolute;
+    left: 20px;
+    top: 14px;
+    background: url(img/me.png) no-repeat 0 0;
+    /* 用户 */
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}
+
+.main-entry a .title .seller {
+    background-image: url(img/me.png);
+}
+/* 商家 */
+
+.main-entry a .title .isv-developer {
+    background-image: url(img/me.png);
+}
+/* 服务 */
+
+.main-entry a .title .developer {
+    background-image: url(img/me.png);
+}
+/* 开发 */
+
+.main-entry s {
+    background-color: #00a3ee;
+    opacity: .9;
+    display: block;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.main-entry a:hover s {
+    background-color: #00aaee;
+    opacity: 1;
+}
+
+a.personal-developer-login,
+a.personal-login,
+a.seller-login
+{
+    margin-left: 20px;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+a.seller-login .seller-entry {
+    display: none;
+    z-index: 2;
+    position: relative;
+    height: 50px;
+}
+a.seller-login .inerval-line {
+    display: none;
+    width: 150px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    height: 0;
+    z-index: 2;
+}
+a.seller-login:hover{
+    height: 100px;
+    margin-top: -25px;
+}
+a.seller-login:hover .title{
+    display: none;
+}
+a.seller-login:hover .seller-entry,
+a.seller-login:hover .inerval-line
+{
+    display: block;
+}
+
+.alipay-app {
+    text-align: center;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+.alipay-app .ma {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.alipay-app img {
+    width: 60px;
+    height: 60px;
+}
+
+.alipay-app p {
+    line-height: 30px;
+    height: 30px;
+    color: #ffffff;
+    margin: 5px 0 10px;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 255, 255,0.4);
+    z-index: 99;
+}
+.ownership {
+    text-align: center;
+    height: 20px;
+    line-height: 25px;
+}
+#ServerNum,#ServerNum p {
+    line-height: 10px;
+    text-align: center;
+    color: red;
+    height: 10px;
+}
+
+.front, .items, .item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.back {
+    bottom: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.items {
+    overflow: visible;
+}
+
+.item {
+    background: #fff none no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: none;
+}

@@ -1,0 +1,5 @@
+#忽略zip文件
+*.zip
+
+#忽略 hxxx/下的zip文件
+hxxx/*.zip
